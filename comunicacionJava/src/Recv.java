@@ -6,6 +6,7 @@ public class Recv {
   private final static String QUEUE_NAME = "hello";
 
   public static void main(String[] argv) throws Exception {
+	  /*
     ConnectionFactory factory = new ConnectionFactory();
     factory.setHost("localhost");
     Connection connection = factory.newConnection();
@@ -23,5 +24,6 @@ public class Recv {
       }
     };
     channel.basicConsume(QUEUE_NAME, true, consumer);
+    */
   }
 }
