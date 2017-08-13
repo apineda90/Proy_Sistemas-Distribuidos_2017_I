@@ -13,7 +13,7 @@ def comprimir(nombreArchivo):
         jungle_zip.close()
         print('Compresion realizada exitosamente')
     else:
-        print('El archivo no existe en el directorio ')
+        print('El archivo '+ nombreArchivo+' no existe en el directorio ')
         print('Compresion no realizada')
 
 
@@ -24,12 +24,13 @@ connection = pika.BlockingConnection(pika.ConnectionParameters(
 channel = connection.channel()
 
 channel.queue_declare(queue='task_queue', durable=True)
-print(' [*] Waiting for messages. To exit press CTRL+C')
+print(' [*] Esperando mensajes. Para salir presione CTRL+C')
 
 def callback(ch, method, properties, body):
     comprimir(body)
     time.sleep(body.count(b'.'))
     print('Fin de ejecucion..')
+    print(' [*] Esperando mensajes. Para salir presione CTRL+C')
     print('                  ')
     ch.basic_ack(delivery_tag = method.delivery_tag)
 
