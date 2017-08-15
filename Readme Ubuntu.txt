@@ -35,7 +35,7 @@ Abrir una consola en el directorio donde se encuentra el archivo “jobPythonCli
 
 
 Ejecución de cliente en Java:
-Abrir una consola en el directorio /comunicacionJava/src/ donde se encuentra el archivo “jobJavaClient.java” y ejecutar los comandos: 
+Abrir una consola en el directorio Proyecto/comunicacionJava/src/ donde se encuentra el archivo “jobJavaClient.java” y ejecutar los comandos: 
 
 javac -cp amqp-client-4.0.2.jar jobJavaClient.java  
 

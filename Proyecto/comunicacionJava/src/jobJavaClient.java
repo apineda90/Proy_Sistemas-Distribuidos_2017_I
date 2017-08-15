@@ -10,7 +10,7 @@ public class jobJavaClient {
 
   public static void main(String[] argv) throws Exception {
     ConnectionFactory factory = new ConnectionFactory();
-    factory.setHost("localhost");
+    factory.setHost("192.168.184.221");                       //Direccion IP del servidor de cola
     Connection connection = factory.newConnection();
     Channel channel = connection.createChannel();
 

@@ -20,7 +20,7 @@ def comprimir(nombreArchivo):
 
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
-        host='localhost'))
+        host='192.168.184.221'))              #Direccion IP del servidor de cola
 channel = connection.channel()
 
 channel.queue_declare(queue='task_queue', durable=True)
